@@ -1,0 +1,466 @@
+body {
+    overflow: hidden;
+    margin: auto;
+    height: 100%;
+}
+
+/* -------------------------------------- TITLE PAGE -------------------------------------- */
+
+#wrapper {
+    width: 1440px;
+    height: 705px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#titlebg {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s;
+}
+
+@keyframes fadeIn {
+    0%   {opacity: 0};
+    100% {opacity: 1};
+}
+
+#spacely {
+    position: absolute;
+    margin: auto;
+    width: 161px;
+    top: 100px;
+    left: 639.5px;
+    transition: transform 0.5s;
+    transition: opacity 2s;
+    animation: fadeIn 4s;
+    z-index: 1;
+}
+
+#spacely:hover {
+    transform: scale(1.05);
+}
+
+@keyframes earthAnim {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(5deg);}
+    50%  {transform: rotate(0deg);}
+    75%  {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+}
+
+#earthTitle {
+    width: 200px;
+    position: absolute;
+    bottom: 100px;
+    right: 150px;
+    animation: earthAnim 4s linear infinite;
+    transition: opacity 2s;
+}
+
+@keyframes arcShip {
+    0%   {transform-origin: 0% 100%;
+          transform: rotate(-10deg);
+          top: 250px;
+          width: 60px;}
+    50%  {transform-origin: 0% 100%;
+          transform: rotate(-40deg);
+          top: 200px;
+          width: 70px;}
+    100% {transform-origin: 0% 100%;
+          transform: rotate(-10deg);
+          top: 250px;
+          width: 60px;}
+}
+
+#shipTitle {
+    position: absolute;
+    right: 200px;
+    animation: arcShip 8s ease-in-out infinite;
+    transition: opacity 2s;
+}
+
+@keyframes arcAlien {
+    0%   {transform: rotate(0deg)
+		             translate(-30px)
+		             rotate(0deg);}
+	50%  {transform: rotate(180deg)
+		             translate(-30px) 
+		             rotate(-180deg);}
+    100% {transform: rotate(0deg)
+		             translate(-30px) 
+		             rotate(0deg);}
+}
+
+#alien1Title {
+    width: 120px;
+    position: absolute;
+    bottom: 40px;
+    left: 270px;
+    transition: all 2s;
+    animation: arcAlien 5s linear infinite;
+}
+
+#alien1Title:hover {
+    transform-origin: 100px 0px;
+    transform: rotate(180deg);
+}
+
+@keyframes planet1Anim {
+    0%   {transform: rotate(-5deg);}
+    25%  {transform: rotate(0deg);}
+    50%  {transform: rotate(5deg);}
+    75%  {transform: rotate(0deg);}
+    100% {transform: rotate(-5deg);}
+}
+
+#planet1Title {
+    width: 230px;
+    position: absolute;
+    top: 120px;
+    left: 180px;
+    animation: planet1Anim 4s linear infinite;
+    transition: opacity 2s;
+}
+
+/*
+GREEN  - #00bca1
+YELLOW - #e08a08
+PINK   - #a700bf
+*/
+
+#start {
+    width: 150px;
+    height: 35px;
+    border-radius: 15px;
+    border: 3px solid #00bca1;
+    background-color: transparent;
+    color: #00bca1;
+    font-family: sans-serif;
+    font-size: 12pt;
+    position: absolute;
+    top: 525px;
+    left: 645px;
+    animation: fadeIn 4s;
+    transition: opacity 2s;
+    z-index: 1;
+}
+
+#start:hover {
+    border: 3px solid #e08a08;
+    color: #e08a08;
+}
+
+/* -------------------------------------- PAGE 2 -------------------------------------- */
+
+#mainbg {
+    width: 8740px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 2s, bottom 5.634s, left 14.366s;   
+}
+
+#setting {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    transition: opacity 2s, bottom 5s;
+}
+
+#tower {
+    width: 342px;
+    position: absolute;
+    bottom: 90px;
+    left: 470px;
+    opacity: 0;
+    transition: opacity 2s, bottom 5s;
+}
+
+#armt {
+    width: 112px;
+    position: absolute;
+    bottom: 352px;
+    left: 580px;
+    opacity: 0;
+    transition: transform 2s, bottom 5s;
+    transform-origin: 0% 50%;
+}
+
+#armb {
+    width: 90px;
+    position: absolute;
+    bottom: 242px;
+    left: 580px;
+    opacity: 0;
+    transition: transform 2s, bottom 5s;
+    transform-origin: 0% 50%;
+}
+
+#spaceship {
+    width: 140px;
+    position: absolute;
+    bottom: 133px;
+    left: 625px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+@keyframes c1 {
+    0%   {left: 150px;}
+    50%  {left: 250px;}
+    100% {left: 150px;}
+}
+
+#cloud1 {
+    width: 407px;
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    animation: c1 30s linear infinite;
+    opacity: 0;
+    transition: opacity 2s, top 5s;
+}
+
+@keyframes c2 {
+    0%   {left: 70px;}
+    50%  {left: 200px;}
+    100% {left: 70px;}
+}
+
+#cloud2 {
+    width: 280px;
+    position: absolute;
+    top: 220px;
+    left: 70px;
+    animation: c2 20s linear infinite;
+    opacity: 0;
+    transition: opacity 2s, top 5s;
+}
+
+@keyframes c3 {
+    0%   {right: 110px;}
+    50%  {right: 200px;}
+    100% {right: 110px;}
+}
+
+#cloud3 {
+    width: 286px;
+    position: absolute;
+    top: 100px;
+    right: 110px;
+    animation: c3 26s linear infinite;
+    opacity: 0;
+    transition: opacity 2s, top 5s;
+}
+
+@keyframes c4 {
+    0%   {right: 220px;}
+    50%  {right: 140px;}
+    100% {right: 220px;}
+}
+
+
+#cloud4 {
+    width: 265px;
+    position: absolute;
+    top: 200px;
+    right: 220px;
+    animation: c4 23s linear infinite;
+    opacity: 0;
+    transition: opacity 2s, top 5s;
+}
+
+#takeoff {
+    width: 150px;
+    height: 35px;
+    border-radius: 15px;
+    border: 3px solid #00bca1;
+    background-color: transparent;
+    color: #00bca1;
+    font-family: sans-serif;
+    font-size: 12pt;
+    position: absolute;
+    top: 150px;
+    left: 615px;
+    transition: opacity 2s;
+    opacity: 0;
+    z-index: 5;
+}
+
+#takeoff:hover {
+    border: 3px solid #e08a08;
+    color: #e08a08;
+}
+
+#flyShip {
+    width: 140px;
+    position: absolute;
+    left: 625px;
+    bottom: 64px;
+    transition: all 2s;
+    opacity: 0;
+}
+
+#smoke {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    transition: opacity 2s, bottom 5s;
+    opacity: 0;
+}
+
+#land {
+    width: 150px;
+    height: 35px;
+    border-radius: 15px;
+    border: 3px solid #00bca1;
+    background-color: transparent;
+    color: #00bca1;
+    font-family: sans-serif;
+    font-size: 12pt;
+    position: absolute;
+    top: 200px;
+    left: 900px;
+    transition: opacity 2s;
+    opacity: 0;
+}
+
+#land:hover {
+    border: 3px solid #e08a08;
+    color: #e08a08;
+}
+
+#planet1 {
+    width: 500px;
+    position: absolute;
+    top: 102.5px;
+    right: -500px;
+    transition: right 4s;
+}
+
+/* -------------------------------------- PAGE 3 -------------------------------------- */
+
+#alienbg {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#lcraterback {
+    width: 177px;
+    position: absolute;
+    bottom: 157px;
+    left: 170px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#lcraterfront {
+    width: 283px;
+    position: absolute;
+    bottom: -3px;
+    left: 129px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#rcraterback {
+    width: 244px;
+    position: absolute;
+    bottom: 105px;
+    right: 184px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#rcraterfront {
+    width: 393px;
+    position: absolute;
+    bottom: -3px;
+    right: 129px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+@keyframes a1Anim {
+    0%   {transform: translate(0px, 0px);}
+    33%  {transform: translate(0px, -200px);}
+    66%  {transform: translate(-200px, -300px);}
+    100% {transform: translate(-450px, -250px);}
+}
+
+#alien1 {
+    width: 148px;
+    position: absolute;
+    bottom: -75px;
+    right: 235px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#alien2 {
+    width: 120px;
+    position: absolute;
+    bottom: 40px;
+    left: 200px;
+    opacity: 0;
+    transition: opacity 2s, bottom 3s;
+}
+
+@keyframes a3Anim {
+    0%   {transform: translate(0px, 0px);}
+    33%  {transform: translate(0px, -200px);}
+    66%  {transform: translate(-150px, -300px);}
+    100% {transform: translate(-275px, -225px);}
+}
+
+#alien3 {
+    width: 158px;
+    position: absolute;
+    bottom: -75px;
+    right: 230px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#flyShipAlien {
+    width: 140px;
+    position: absolute;
+    left: 450px;
+    bottom: 705px;
+    opacity: 1;
+    transition: opacity 2s, bottom 4s;
+}
+
+#spaceshipAlien {
+    width: 140px;
+    position: absolute;
+    left: 450px;
+    bottom: 138px;
+    opacity: 0;
+}
+
+@keyframes astroAnim {
+    0%   {transform: translate(0px, 0px);}
+    100% {transform: translate(150px, 150px);}
+}
+
+#astronaut {
+    width: 81px;
+    position: absolute;
+    left: 480px;
+    bottom: 200px;
+    opacity: 0;
+    transition: opacity 1s;
+}
